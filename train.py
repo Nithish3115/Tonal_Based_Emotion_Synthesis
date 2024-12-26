@@ -136,7 +136,7 @@ def train(start_epoch=0):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     # Get all data names
-    data_list = os.listdir('MusicEmotionDetection/data/spectrograms')
+    data_list = os.listdir('Tonal_Based_Emotion_Synthesis/data/spectrograms')
     data_list = [f.split('.')[0] for f in data_list]
 
     # Prepare train/val data
@@ -155,7 +155,7 @@ def train(start_epoch=0):
     model = Audio2EmotionModel().to(device)
 
     # Load the last saved model state if continuing training
-    model.load_state_dict(torch.load('MusicEmotionDetection/weights/last.pth'))
+    model.load_state_dict(torch.load('Tonal_Based_Emotion_Synthesis/weights/last.pth'))
 
     # Loss function
     criterion = nn.CrossEntropyLoss()
@@ -165,15 +165,15 @@ def train(start_epoch=0):
     optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 
     # Training settings
-    num_epochs = 460
+    num_epochs = 1000
     early_stop_patience = 50
     early_stop_delta = 1e-3
     early_stop_counter = 0
-    model_save_path = 'MusicEmotionDetection/weights/'
+    model_save_path = 'Tonal_Based_Emotion_Synthesis/weights/'
     best_loss = float('inf')
 
     # TensorBoard support
-    writer = SummaryWriter('MusicEmotionDetection/train_log/')
+    writer = SummaryWriter('Tonal_Based_Emotion_Synthesis/train_log/')
 
     # Continue training from the specified epoch
     for epoch in range(start_epoch, num_epochs):
@@ -231,4 +231,4 @@ def train(start_epoch=0):
 
 if __name__ == '__main__':
     # Start training from epoch 210
-    train(start_epoch=387)
+    train(start_epoch=770)

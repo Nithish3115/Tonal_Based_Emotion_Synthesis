@@ -76,5 +76,5 @@ def build_default_dataloader(data_list:list) -> DataLoader:
         A dataloader class
     """
 
-    dataset = AudioEmotionDataset(data_list, 'MusicEmotionDetection/data/spectrograms', 'MusicEmotionDetection/data/mean_ratings_set1.csv')
+    dataset = AudioEmotionDataset(data_list, 'Tonal_Based_Emotion_Synthesis/data/spectrograms', 'Tonal_Based_Emotion_Synthesis/data/mean_ratings_set1.csv')
     return DataLoader(dataset, 8, shuffle=True)
