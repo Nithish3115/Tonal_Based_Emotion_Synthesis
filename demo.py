@@ -117,9 +117,9 @@ def print_scores(scores: np.ndarray) -> None:
 
 if __name__ == '__main__':
     # config
-    checkpoint_path = '/home/nithish/Desktop/m/MusicEmotionDetection/weights/best.pth'
+    checkpoint_path = '/home/nithish/Desktop/Tonal_Based_Emotion_Synthesis/weights/best.pth'
     # test audio spectrograms
-    audio_spectrograms_path = '/home/nithish/Desktop/m/MusicEmotionDetection/data/spectrograms/201.mp3.npy'
+    audio_spectrograms_path = '/home/nithish/Desktop/Tonal_Based_Emotion_Synthesis/data/spectrograms/201.mp3.npy'
 
     # init model and loading weights
     model = Audio2EmotionModel()

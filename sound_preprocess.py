@@ -140,8 +140,8 @@ if __name__ == "__main__":
     SAMPLE_RATE = 22050
     MONO = True
 
-    SPECTROGRAM_SAVE_DIR = "data/spectrograms/"
-    FILES_DIR = "data/audio/"
+    SPECTROGRAM_SAVE_DIR = "/home/nithish/Desktop/Tonal_Based_Emotion_Synthesis/data/spectrograms/"
+    FILES_DIR = "/home/nithish/Desktop/Tonal_Based_Emotion_Synthesis/data/audio/"
 
     loader = Loader(SAMPLE_RATE, DURATION, MONO)
     padder = Padder()

@@ -231,4 +231,4 @@ def train(start_epoch=0):
 
 if __name__ == '__main__':
     # Start training from epoch 210
-    train(start_epoch=770)
+    train(start_epoch=971)
